@@ -1,4 +1,4 @@
-﻿namespace ProductImport
+﻿namespace SpecificationRulesTest.ProductImport
 {
     public class Product
     {

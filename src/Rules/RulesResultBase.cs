@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Rules
 {
-    public class RulesResultBase<TEntity> : IRulesResult<TEntity>
+    public sealed class RulesResultBase<TEntity>
     {
-        public  TEntity Entity { get; private set; }
-        public List<IRules<TEntity>> Rules { get; private set; }
-
-        public void Add(TEntity entity, List<IRules<TEntity>> rules)
+        public RulesResultBase(TEntity entity, List<IRules<TEntity>> rules)
         {
             Entity = entity;
             Rules = rules;
         }
+
+        public TEntity Entity { get; private set; }
+        public List<IRules<TEntity>> Rules { get; private set; }
     }
 }

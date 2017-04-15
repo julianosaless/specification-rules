@@ -2,21 +2,11 @@
 
 namespace Rules
 {
-    public abstract class RulesBase<TEntity>
+    public abstract class RulesBase<TEntity, TRulesResult>
     {
         protected abstract List<IRules<TEntity>> Rules { get; }
 
-        public virtual List<RulesResultBase<TEntity>> ApplyRules(List<TEntity> entites)
-        {
-            var rulesResult = new List<RulesResultBase<TEntity>>();
-            entites.ForEach(entity =>
-            {
-                var ruleResultBase = new RulesResultBase<TEntity>();
-                ruleResultBase.Add(entity, ProcessRules(entity));
-                rulesResult.Add(ruleResultBase);
-            });
-            return rulesResult;
-        }
+        public abstract List<TRulesResult> ApplyRules(List<TEntity> entites);
 
         protected virtual List<IRules<TEntity>> ProcessRules(TEntity entity)
         {

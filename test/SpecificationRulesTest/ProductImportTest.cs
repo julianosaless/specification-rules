@@ -1,17 +1,16 @@
-using System;
 using System.Collections.Generic;
 using Rules;
 using Xunit;
-using ProductImport;
 using System.Linq;
 using FluentAssertions;
+using SpecificationRulesTest.ProductImport;
 
 namespace SpecificationRulesTest
 {
     public class ProductImportTest
     {
         [Fact]
-        public void ShouldValidateProductNames()
+        public void ShouldValidateProductName()
         {
             var products = new List<Product>
             {

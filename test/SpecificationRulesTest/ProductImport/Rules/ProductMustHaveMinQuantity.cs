@@ -1,6 +1,6 @@
 ﻿using Rules;
 
-namespace ProductImport.Rules
+namespace SpecificationRulesTest.ProductImport.Rules
 {
     public class ProductMustHaveMinQuantity : IRules<Product>
     {
