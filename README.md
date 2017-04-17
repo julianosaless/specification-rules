@@ -55,7 +55,7 @@
   }
 ```
 *******
-# Validation
+# Usage
 ```
     var products = new List<Product>
     {
