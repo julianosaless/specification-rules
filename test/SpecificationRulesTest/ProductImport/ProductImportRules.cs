@@ -12,11 +12,5 @@ namespace SpecificationRulesTest.ProductImport
             new ProductMustHaveName(),
             new ProductMustHaveMinQuantity()
         };
-
-        public override List<RulesResultBase<Product>> ApplyRules(List<Product> entites)
-        {
-            return entites
-                     .Select(entity => new RulesResultBase<Product>(entity, ProcessRules(entity))).ToList();
-        }
     }
 }

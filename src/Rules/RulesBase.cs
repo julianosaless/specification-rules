@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Rules
 {
@@ -6,7 +7,11 @@ namespace Rules
     {
         protected abstract List<IRules<TEntity>> Rules { get; }
 
-        public abstract List<TRulesResult> ApplyRules(List<TEntity> entites);
+        public virtual List<TRulesResult> ApplyRules(List<TEntity> entites)
+        {
+            return entites
+                     .Select(entity => new RulesResultBase<TEntity>(entity, ProcessRules(entity))).Cast<TRulesResult>().ToList();
+        }
 
         protected virtual List<IRules<TEntity>> ProcessRules(TEntity entity)
         {
