@@ -1,10 +1,13 @@
 
 # Specification-Rules
 
+The *Specifications-Rules* project aims to guide you through this process of adding new rules, bringing more reassurance and testability to each business rule of your application
+
 ![Image of pull specification-rules](https://dl.dropboxusercontent.com/s/uv3ys3bkd1wa0iw//specification-rules.jpg)
 
 
-# How to use
+
+# Product import scenario
 
 
 #### 1 - Define your Rules
